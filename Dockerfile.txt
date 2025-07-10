@@ -1,0 +1,31 @@
+# Use official Python image as base
+FROM python:3.9-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies (if needed for any Python packages)
+RUN apt-get update && apt-get install -y \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first to leverage Docker cache
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application code
+COPY . .
+
+# Environment variables (set these when running the container)
+ENV AZURE_OPENAI_ENDPOINT="https://aemfoundry10072025.cognitiveservices.azure.com/"
+ENV AZURE_OPENAI_KEY="6Va4aE8SSmc2Z1C9Djk8HPoFWVLmaTs31M8En12PVWWJW2bvcBSMJQQJ99BGACYeBjFXJ3w3AAAAACOGtPe7"
+
+# Make the script executable (if needed)
+RUN chmod +x app.py
+
+# Command to run the chatbot in console mode
+ENTRYPOINT ["python", "app.py"]
+
+
+
