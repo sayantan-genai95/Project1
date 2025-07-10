@@ -1,3 +1,3 @@
 # Text to Image
 ## An AI Project
-### Build on Azure Platform
+### Built on Azure Platform
