@@ -1,0 +1,39 @@
+Docker-GenAI-Azure
+
+Deploy Gen-AI application in Docker
+Once the Gen-AI application is successfully tested and able to generate the desired output then we need to deploy the Gen-AI application using Docker by following the below steps:
+•	Firstly we need to install docker in the venv environment using either of the below 2 commands:-	
+o	apt install docker.io
+o	curl -fsSL https://get.docker.com -o get-docker.sh
+•	To execute the “get-docker.sh” file, we need to run:
+o	sh get-docker.sh
+•	Then we will have to create the Dockerfile under the venv environment
+o	nano Dockerfile – The commands to be executed under Dockerfile is explained in the below section
+•	We need to create requirements.txt file now
+o	nano requirements.txt – The packages to be installed for running the code should be enlisted under requirements.txt file
+•	Now we need to build the docker image using aforementioned config
+o	docker build -t <image name> 
+	Note: Image name should be different from python application name
+•	Once we built the image, the image will be visible using the below command
+o	docker images
+•	Now we need to run the docker image to create a docker container using the below command
+o	docker run –it <image name>
+•	We can view the active container under the docker repository using the below command
+o	docker ps -a
+
+Dockerfile
+The Dockerfile comprises of a set of instruction which is required to build a Docker image. The Dockerfile doesn’t have an extension and it is placed in the venv location where the model is deployed. The Key components include:
+•	specifying the base image
+•	copying files
+•	installing dependencies
+•	setting environment variables
+•	Defining the startup command.
+
+ 
+
+
+Requirements file
+A “requirements.txt” file need to be placed in the venv location which comprises of the packages or modules that need to be installed in order to run the python application deployed using docker image.
+
+ 
+
