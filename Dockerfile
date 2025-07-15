@@ -18,8 +18,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Environment variables (set these when running the container)
-ENV AZURE_OPENAI_ENDPOINT="https://aemfoundry10072025.cognitiveservices.azure.com/"
-ENV AZURE_OPENAI_KEY="6Va4aE8SSmc2Z1C9Djk8HPoFWVLmaTs31M8En12PVWWJW2bvcBSMJQQJ99BGACYeBjFXJ3w3AAAAACOGtPe7"
+ENV AZURE_OPENAI_ENDPOINT="https://aemfoundry1507.cognitiveservices.azure.com/"
+ENV AZURE_OPENAI_KEY="8381LxyI3QToYrKco757N6uZrQ1kVPACTWOtqvILRh5VDky8Kt6bJQQJ99BGACYeBjFXJ3w3AAAAACOGEyYn"
 
 # Make the script executable (if needed)
 RUN chmod +x app.py
