@@ -2,10 +2,10 @@ import os
 from openai import AzureOpenAI
 
 # You will need to set these environment variables or edit the following values.
-endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://aemfoundry10072025.cognitiveservices.azure.com/")
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://aemfoundry1507.cognitiveservices.azure.com/")
 api_version = os.getenv("OPENAI_API_VERSION", "2024-04-01-preview")
 deployment = os.getenv("DEPLOYMENT_NAME", "dall-e-3")
-api_key = os.getenv("AZURE_OPENAI_API_KEY", "6Va4aE8SSmc2Z1C9Djk8HPoFWVLmaTs31M8En12PVWWJW2bvcBSMJQQJ99BGACYeBjFXJ3w3AAAAACOGtPe7")
+api_key = os.getenv("AZURE_OPENAI_API_KEY", "8381LxyI3QToYrKco757N6uZrQ1kVPACTWOtqvILRh5VDky8Kt6bJQQJ99BGACYeBjFXJ3w3AAAAACOGEyYn")
 
 # Initialize the client
 client = AzureOpenAI(
